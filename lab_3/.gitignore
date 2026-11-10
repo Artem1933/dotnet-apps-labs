@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+.tools/
+.packages/
+*.db
+*.db-shm
+*.db-wal
