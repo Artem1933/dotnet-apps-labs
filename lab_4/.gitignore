@@ -1,0 +1,11 @@
+bin/
+obj/
+.vs/
+.packages/
+.tools/
+*.db
+*.db-shm
+*.db-wal
+.cli-home/
+.nuget-http/
+.temp/
