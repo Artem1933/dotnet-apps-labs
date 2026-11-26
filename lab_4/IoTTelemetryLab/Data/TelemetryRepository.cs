@@ -23,7 +23,6 @@ public class TelemetryRepository : ITelemetryRepository
     public async Task AddReadingsAsync(int deviceId, IEnumerable<TelemetryRecord> readings,
         CancellationToken ct = default)
     {
-        // ToList() фіксує колекцію: ледачий LINQ-запит при другому переборі створив би нові об'єкти
         var list = readings.ToList();
         foreach (var r in list)
         {
@@ -57,7 +56,7 @@ public class TelemetryRepository : ITelemetryRepository
 
     public async Task<bool> RenameDeviceAsync(int id, string newName, CancellationToken ct = default)
     {
-        var device = await _context.Devices.FirstOrDefaultAsync(d => d.Id == id, ct); // з відстеженням
+        var device = await _context.Devices.FirstOrDefaultAsync(d => d.Id == id, ct);
         if (device is null) return false;
 
         device.Name = newName;
@@ -70,7 +69,7 @@ public class TelemetryRepository : ITelemetryRepository
         var device = await _context.Devices.FirstOrDefaultAsync(d => d.Id == id, ct);
         if (device is null) return false;
 
-        _context.Devices.Remove(device);   // покази видаляються каскадом (ЛР3)
+        _context.Devices.Remove(device);
         await _context.SaveChangesAsync(ct);
         return true;
     }

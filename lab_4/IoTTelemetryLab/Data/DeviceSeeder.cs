@@ -1,4 +1,3 @@
-// Data/DeviceSeeder.cs - змінити файл
 using IoTTelemetryLab.Models;
 using IoTTelemetryLab.Processing;
 

@@ -1,4 +1,3 @@
-// Data/ITelemetryRepository.cs
 using IoTTelemetryLab.Models;
 
 namespace IoTTelemetryLab.Data;

@@ -1,4 +1,3 @@
-// Settings/TelemetrySettings.cs
 namespace IoTTelemetryLab.Settings;
 
 public class TelemetrySettings

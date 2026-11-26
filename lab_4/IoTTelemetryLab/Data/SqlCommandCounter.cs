@@ -1,7 +1,5 @@
-// Data/SqlCommandCounter.cs
 namespace IoTTelemetryLab.Data;
 
-// Діагностичний помічник: рахує SQL-команди, виконані EF Core
 public static class SqlCommandCounter
 {
     public static int Count { get; private set; }
